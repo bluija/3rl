@@ -27,7 +27,7 @@ const numTrial = 100;
 const clrs = {"Red": "#D81B60", "Blue": "#1E88E5", "Yellow": "#FFC107", "Green": "#004D40"}
 const clrsArr = ["Red", "Blue", "Yellow", "Green"]
 
-const studyId = "4rl";
+const studyId = "5rl";
 const dbPath = studyId + '/participantData/' + firebaseUserId + "/";
 
 const expData = {};
