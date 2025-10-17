@@ -27,7 +27,7 @@ const numTrial = 100;
 const clrs = {"Red": "#D81B60", "Blue": "#1E88E5", "Yellow": "#FFC107", "Green": "#004D40"}
 const clrsArr = ["Red", "Blue", "Yellow", "Green"]
 
-const studyId = "3rl";
+const studyId = "4rl";
 const dbPath = studyId + '/participantData/' + firebaseUserId + "/";
 
 const expData = {};
@@ -196,7 +196,7 @@ startButton.onclick = async () => {
 
     introJs().setOptions({
         exitOnEsc: false, exitOnOverlayClick: false,
-        // showBullets: false, keyboardNavigation: false,
+        showBullets: false, keyboardNavigation: false,
 
         steps: [{
             title: 'Welcome',
@@ -384,7 +384,7 @@ redirectButton.onclick = () => {
 // initialize
 writeURLParameters(dbPath + '/pid')
 
-const condition = await blockRandomization(studyId, "ai", 2, 100, 1)
+const condition = await blockRandomization(studyId, "ai", 3, 100, 1)
 expData.condition = condition[0];
 
 const dataPath = `data${expData.condition}.json`;

@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "$studyId": {
+      "studyInfo": {
+        // Allow any participant read and write access to child node "[studyId]\studyInfo"
+        ".write": "auth.uid !== null",
+        ".read": "auth.uid !== null"
+      },
+      "participantData": {
+        "$userId": {
+          // Allow participant read and write access only to their own data
+          // under child node "[studyId]\participantData\[userid]"
+          ".write": "$userId === auth.uid",
+          ".read": "$userId === auth.uid"
+        }
+      }
+    }
+  }
+}
